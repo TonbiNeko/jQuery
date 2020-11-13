@@ -16,7 +16,6 @@ $(document).ready(function(){
 
   function get_achievement(){
     let averageIndicate = $("#average_indicate").text();
-    console.log(averageIndicate)
     if ( averageIndicate >= 80){
       return "A";
     } else if ( averageIndicate >= 60) {
@@ -61,6 +60,7 @@ $(document).ready(function(){
     $("#judge").text(get_pass_or_failure());
   });
   $('#btn-declaration').click(function() {
+  $("#alert-indicate").remove();
   $("#declaration").text(judgement());
   });
 });
